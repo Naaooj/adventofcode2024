@@ -24,3 +24,9 @@ right.sort()
 total_distance = sum(abs(l - r) for l, r in zip(left, right))
 
 print("total distance", total_distance)
+
+multiplied_counts = [left_item * right.count(left_item) for left_item in left if right.count(left_item) > 0]
+# Sum all the elements from multiplied_counts
+sum_multiplied_counts = sum(multiplied_counts)
+
+print("sum multiplied counts", sum_multiplied_counts)
